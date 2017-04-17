@@ -1,8 +1,6 @@
 const GameMenu = function() {};
 
-
 GameMenu.prototype = {
-
     menuConfig: {
         startY: 290,
         startX: 40
@@ -40,15 +38,12 @@ GameMenu.prototype = {
             target.stroke = "rgba(0,0,0,0)";
             txt.useHandCursor = false;
         };
-        //txt.useHandCursor = true;
+
         txt.inputEnabled = true;
         txt.events.onInputUp.add(callback, this);
         txt.events.onInputOver.add(onOver, this);
         txt.events.onInputOut.add(onOut, this);
-
         this.optionCount++;
-
-
     },
 
     create: function() {
@@ -71,7 +66,6 @@ GameMenu.prototype = {
         this.addMenuOption('Options', function() {
             game.state.start("Options");
         });
-
     }
 };
 

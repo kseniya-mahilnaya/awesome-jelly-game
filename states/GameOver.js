@@ -28,15 +28,11 @@ GameOver.prototype = {
             target.stroke = "rgba(0,0,0,0)";
             txt.useHandCursor = false;
         };
-        //txt.useHandCursor = true;
         txt.inputEnabled = true;
         txt.events.onInputUp.add(callback, this);
         txt.events.onInputOver.add(onOver, this);
         txt.events.onInputOut.add(onOut, this);
-
         this.optionCount++;
-
-
     },
 
     create: function() {
